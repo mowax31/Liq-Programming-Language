@@ -1,0 +1,42 @@
+Im gonna write in C. C++/g++/clang++ sucks in bison programming.. so, im moving to C..  from starting
+
+
+
+#########################
+# parser.y :		#
+#			#
+# data_type: INT	#
+#          | FLOAT	#
+#          | DOUBLE	#
+#          | STRSTM	#
+#          | BOOLSTM	#
+#          | CHARSTM	#
+#          ;		#
+#########################
+        
+####################################################################################
+from char gpt: # very important      
+In Bison (a parser generator), `$` and `$$` are special symbols used to refer to specific elements within the grammar rules. Here's what they typically represent:
+
+- `$`: Refers to the value of the last token matched by the parser. In other words, it represents the semantic value of the current symbol being reduced.
+
+- `$$`: Represents the semantic value of the whole construct being reduced. It is often used in the actions associated with grammar rules to assign a value to the non-terminal on the left-hand side of the rule.
+
+Let's look at a simple example to illustrate the use of `$` and `$$`. Consider the following Bison rule:
+
+```yacc
+expression: NUM '+' NUM {
+    $$ = $1 + $3;
+}
+```
+
+In this example:
+
+- `$1` refers to the value of the first `NUM`.
+- `$3` refers to the value of the third `NUM`.
+- `$$` is the semantic value associated with the entire `expression` construct.
+
+So, the action `{ $$ = $1 + $3; }` would set the value of the entire expression to the sum of the values of the two numbers.
+
+These symbols make it convenient to manipulate and pass values during the parsing process. The specific meaning of `$` and `$$` can depend on the context within your grammar rules and associated actions.
+#######################################################################################

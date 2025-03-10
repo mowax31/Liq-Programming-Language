@@ -1,0 +1,142 @@
+<==================== correct assign ================>
+
+############################################## simple ##################################################
+
+
+
+let a
+---------
+let a = 1
+let a = "asfd"
+let a = 's'
+let a = true
+
+let a1
+-------
+let a = "asd"
+
+let a, b, c, d
+------------
+let a = 10, b = 'a', c = "adsfsd", d = true
+
+let abc;
+--------
+let abc = 100
+let abc = "safdfs"
+let abc = 'a'
+let abc = true
+
+let abc, acc, axz, ncc
+-----------------
+let abc = 100
+let acc = "sfd"
+let axz = 'a'
+let ncc = true
+
+
+
+#################################################### with def ##########################################
+
+
+
+******* int ********
+let::int a
+----------
+let::int a = 100
+
+let::int a, b, c, d
+--------------------
+let::int a = 100; b = 200, c = 500, d = 10000
+
+
+
+
+
+******* float ********
+
+let::f32 a
+-----------
+let::f32 a = 100.0
+
+let::f64 a
+-----------
+let::f64 a = 100.2434244343
+
+
+
+
+
+******* bool **********
+
+let::bool a
+------------
+let::bool a = true
+let::bool a = false
+
+let::bool a, b, c, d
+--------------------
+let::bool a = true, b = false, c = true, d = false
+
+
+
+
+
+<==================== wrong assign =================>
+
+
+########################################################## simple ##################################################
+
+
+################# INT ###################
+#	same for f32 and f64		#
+#########################################
+----------------------------------------
+let 1a	//no number in first
+
+error:
+	 identifier cant start with number
+----------------------------------------
+
+---------------------------------------
+let = a	// no eql b/w let and id
+
+error:
+	let(declaration) can't be assigned as operation
+----------------------------------------
+
+----------------------------------------
+let a::int	// no connection b/w id,dcm,idfy
+
+error:
+	this method is not acceptable
+---------------------------------------
+
+--------------------------------------
+let:a	// no single colon
+
+error:
+	declaration must be in double colon
+------------------------------------
+
+############ STRING  ##############
+
+------------------------------------
+let a = " sfd"|| "asd dsd"
+
+error:
+	no space between string
+------------------------------------
+
+################ CHAR ################
+
+------------------------------------
+let a = 'as'
+error:
+	character should not be in multiple letters
+------------------------------------
+
+-----------------------------------
+let a = ' a' || 'a ' || ' a '
+error:
+	char must not have space  
+-----------------------------------
